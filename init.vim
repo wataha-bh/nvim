@@ -100,6 +100,8 @@ Plug 'ambv/black'
 Plug 'petobens/poet-v'
 Plug 'fisadev/vim-isort'
 
+" Barbell
+Plug '~/bionichound/vim-barbell'
 
 call plug#end()
 
@@ -140,10 +142,10 @@ nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
 nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 
 " Harpoon
-:lua require("telescope").load_extension('harpoon')
-nnoremap <leader>ha <cmd>:lua require("harpoon.mark").add_file()<cr>
-nnoremap <leader>hu <cmd>:lua require("harpoon.ui").toggle_quick_menu()<cr>
-nnoremap <leader>ht <cmd>:lua require("harpoon.term").gotoTerminal(1)<cr>
+" :lua require("telescope").load_extension('harpoon')
+" nnoremap <leader>ha <cmd>:lua require("harpoon.mark").add_file()<cr>
+" nnoremap <leader>hu <cmd>:lua require("harpoon.ui").toggle_quick_menu()<cr>
+" nnoremap <leader>ht <cmd>:lua require("harpoon.term").gotoTerminal(1)<cr>
 
 " Clear search match
 nnoremap <silent> <Leader>cl :let @/=""<cr>
@@ -160,3 +162,6 @@ let g:python3_host_prog='~/.pyenv/shims/python'
 
 " LSP stuff
 :lua require("lsp")
+
+" Barbell
+xnoremap <silent> <F10> :PostJson<CR>
