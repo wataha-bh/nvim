@@ -1,4 +1,9 @@
+syntax on
+
+" Leader
+" ------
 let mapleader = ","
+set timeoutlen=500
 
 filetype on
 filetype indent on
@@ -7,7 +12,7 @@ set encoding=UTF-8
 :set ignorecase
 :set smartcase
 
-syntax on
+
 set nocompatible
 set hlsearch
 set number relativenumber
@@ -116,7 +121,7 @@ nnoremap <silent> <leader>tl :tabnext<cr>
 nnoremap <silent> <leader>th :tabprev<cr>
 nnoremap <silent> <leader>q :q<cr>
 nnoremap <silent> <leader>V :vsplit<cr>
-nnoremap <silent> <leader>H :split<cr>
+nnoremap <silent> <leader>S :split<cr>
 nnoremap <silent> <leader>l <c-w>l
 nnoremap <silent> <leader>h <c-w>h
 nnoremap <silent> <leader>j <c-w>j
@@ -126,6 +131,12 @@ nnoremap <silent> <leader>B :bprevious<cr>
 
 " PlugInstall
 nnoremap <F12> :PlugInstall<cr>
+
+" Git
+" ---------------
+nnoremap <silent> <leader>gs :Git<cr>
+nnoremap <silent> <leader>gaa :Git add .<cr>
+nnoremap <leader>ga :Git add 
 
 " Source vimrc
 nnoremap <silent> <Leader><Leader>r :source $MYVIMRC<cr>
