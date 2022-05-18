@@ -136,7 +136,7 @@ nnoremap <F12> :PlugInstall<cr>
 " ---------------
 nnoremap <silent> <leader>gs :Git<cr>
 nnoremap <silent> <leader>gaa :Git add .<cr>
-nnoremap <silent> <leader>ggp  :Git push origin "$(git_current_branch)"<cr>
+nnoremap <silent> <leader>ggp  :Git push origin<cr>
 nnoremap <leader>ga :Git add 
 nnoremap <leader>gcsm :Git commit -s -S -m
 nnoremap <leader>gloda :Git log --oneline --decorate --graph --all<cr>
@@ -148,7 +148,7 @@ nnoremap <silent> <Leader><Leader>r :source $MYVIMRC<cr>
 nnoremap <silent> <Leader>v :e $MYVIMRC<cr>
 
 " Telescope
-:lua require("telescope").setup()
+:lua require("telescope_config")
 nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
 nnoremap <leader>ffg <cmd>lua require('telescope.builtin').git_files()<cr>
 nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
@@ -165,8 +165,8 @@ nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 nnoremap <silent> <Leader>cl :let @/=""<cr>
 
 " Colorscheme
-" let ayucolor="dark"   " for dark version of theme
-colorscheme meta5
+" colorscheme meta5
+colorscheme OceanicNext
 
 let g:go_def_mode='gopls'
 let g:go_info_mode='gopls'
