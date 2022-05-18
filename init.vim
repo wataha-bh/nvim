@@ -136,7 +136,10 @@ nnoremap <F12> :PlugInstall<cr>
 " ---------------
 nnoremap <silent> <leader>gs :Git<cr>
 nnoremap <silent> <leader>gaa :Git add .<cr>
+nnoremap <silent> <leader>ggp  :Git push origin "$(git_current_branch)"<cr>
 nnoremap <leader>ga :Git add 
+nnoremap <leader>gcsm :Git commit -s -S -m
+nnoremap <leader>gloda :Git log --oneline --decorate --graph --all<cr>
 
 " Source vimrc
 nnoremap <silent> <Leader><Leader>r :source $MYVIMRC<cr>
