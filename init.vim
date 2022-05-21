@@ -128,6 +128,14 @@ nnoremap <silent> <leader>j <c-w>j
 nnoremap <silent> <leader>k <c-w>k
 nnoremap <silent> <leader>b :bnext<cr>
 nnoremap <silent> <leader>B :bprevious<cr>
+" Resizing
+nnoremap <silent> <leader>w] :resize +10<cr>
+nnoremap <silent> <leader>w[ :resize -10<cr>
+nnoremap <silent> <leader>w< :vertical resize -10<cr>
+nnoremap <silent> <leader>w<< :vertical resize -25<cr>
+nnoremap <silent> <leader>w> :vertical resize +10<cr>
+nnoremap <silent> <leader>w>> :vertical resize +25<cr>
+
 
 " PlugInstall
 nnoremap <F12> :PlugInstall<cr>
